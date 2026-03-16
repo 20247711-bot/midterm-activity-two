@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-
 import Navigation from './Components/NavBar';
 import Form from './Components/StudentForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Student from './Components/StudentDetails';
 
 const Home = () => <div className="container mt-4">Home Page</div>;
 

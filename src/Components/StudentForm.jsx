@@ -29,13 +29,13 @@ const Form = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    // Update form data
+    
     setFormData({
       ...formData,
       [name]: value,
     });
 
-    // Validate inputs on the fly
+    
     if (name === 'name') setErrors({ ...errors, name: validateName(value) });
     if (name === 'email') setErrors({ ...errors, email: validateEmail(value) });
     if (name === 'course') setErrors({ ...errors, course: validateCourse(value) });
@@ -61,7 +61,7 @@ const Form = () => {
     <div className="container mt-4">
       <h2>Registration Form</h2>
       <form onSubmit={handleSubmit}>
-        {/* Name */}
+        
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
           <input
@@ -75,7 +75,7 @@ const Form = () => {
           {errors.name && <div className="text-danger">{errors.name}</div>}
         </div>
 
-        {/* Email */}
+   
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email</label>
           <input
@@ -89,7 +89,6 @@ const Form = () => {
           {errors.email && <div className="text-danger">{errors.email}</div>}
         </div>
 
-        {/* Course */}
         <div className="mb-3">
           <label htmlFor="course" className="form-label">Course</label>
           <input
@@ -103,11 +102,10 @@ const Form = () => {
           {errors.course && <div className="text-danger">{errors.course}</div>}
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="btn btn-primary"
-          disabled={!isFormValid}  // Disabled if form is invalid
+          disabled={!isFormValid} 
         >
           Submit
         </button>
