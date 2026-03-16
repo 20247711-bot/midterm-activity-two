@@ -14,11 +14,6 @@ const Register = () => (
   </div>
 );
 
-const Student = () => {
-  const { id } = useParams(); 
-  return <div className="container mt-4">Student Profile for ID: {id}</div>;
-};
-
 const App = () => {
   return (
     <Router>
